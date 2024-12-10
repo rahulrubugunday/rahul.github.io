@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lights Out</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+    #board {
+      display: grid;
+      grid-template-columns: repeat(5, 60px);
+      grid-gap: 5px;
+      margin-bottom: 20px;
+    }
+    .cell {
+      width: 60px;
+      height: 60px;
+      background-color: #000;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+    .cell.is-off {
+      background-color: #fff;
+    }
+    #game-info {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .stat {
+      font-size: 1.2rem;
+      margin: 5px 0;
+    }
+    #win-message {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      color: green;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Revenge of Lights Out</h1>
+  <div id="game-info">
+    <div class="stat">Moves: <span id="move-counter">0</span></div>
+    <div class="stat">Target Moves: <span id="target-moves">0</span></div>
+    <div class="stat">Time Elapsed: <span id="timer">0</span> seconds</div>
+  </div>
+  <div id="board"></div>
+  <div id="win-message">You Win!</div>
+
+  <button id="reset-btn">Reset Game</button>
+  <script src="script.js"></script>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
